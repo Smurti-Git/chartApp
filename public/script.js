@@ -1,4 +1,4 @@
-const socket = io("https://chartapp-production.up.railway.app");  // Automatically connects to the current domain
+const socket = io("https://chartapp-production.up.railway.app");
 
 const messageContainer = document.getElementById('message-container');
 const messageForm = document.getElementById('send-container');
@@ -32,4 +32,5 @@ function appendMessage(message) {
   const messageElement = document.createElement('div');
   messageElement.innerText = message;
   messageContainer.append(messageElement);
+  messageContainer.scrollTop = messageContainer.scrollHeight; // Scroll to the bottom
 }
