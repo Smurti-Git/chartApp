@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Chat App</title>
   <script defer src="/socket.io/socket.io.js"></script>
-
   <script defer src="script.js"></script>
   <style>
     body {
@@ -19,6 +18,8 @@
     #message-container {
       width: 80%;
       max-width: 1200px;
+      overflow-y: auto; /* Enable vertical scrolling */
+      height: 80vh; /* Set a fixed height */
     }
 
     #message-container div {
@@ -32,12 +33,12 @@
 
     #send-container {
       position: fixed;
-      padding-bottom: 30px;
       bottom: 0;
       background-color: white;
-      max-width: 1200px;
       width: 80%;
+      max-width: 1200px;
       display: flex;
+      padding: 15px; /* Adjust padding */
     }
 
     #message-input {
